@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Program
+{
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		float cie,see,total;
+		System.out.println("Enter your cie marks");
+		cie=scan.nextFloat();
+		System.out.println("Enter your see marks");
+		see=scan.nextFloat();
+		total=cie+(see/2);
+		if (total>90)
+			System.out.println("S");
+		else if (total>80)
+			System.out.println("A");
+		else if (total>70)
+			System.out.println("B");
+		else if (total>60)
+			System.out.println("C");
+		else if (total>50)
+			System.out.println("D");
+		else if (total>40)
+			System.out.println("E");
+		else 
+			System.out.println("F");
+}}
