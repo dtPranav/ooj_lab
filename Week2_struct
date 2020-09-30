@@ -1,0 +1,45 @@
+#include <stdio.h>
+struct stud{
+	char name[30];
+	int ele;
+};
+int count_iot=0,count_java=0,count_ds=0;
+int main() {
+	int n;
+	printf("\nEnter the number of students");
+	scanf("%d",&n);
+	struct stud s[n];
+	int iot[n],java[n],ds[n];
+	for(int i=0;i<n;i++){
+		printf("\nEnter the student %d detail",i+1);
+		printf("\nEnter name");
+		scanf("%s",s[i].name);
+		printf("\n 1. Internet of things \n 2. Advance java and j2ee \n 3. Advance data Structure");
+			printf("\n Choose one elective(1-3)");
+			scanf("%d",&s[i].ele);
+			if (s[i].ele==1)
+				{count_iot+=1;
+				iot[count_iot-1]=i;}
+			else if(s[i].ele==2)
+				{count_java++;
+				java[count_java-1]=i;}
+			else
+				{count_ds++;
+				ds[count_ds-1]=i;}
+			}
+printf("\nNumber of student in each elective");
+printf("\nNumber of student in iot elective : %d",count_iot);
+for (int i=0;i<count_iot;i++){
+	printf("\n %s",s[iot[i]].name);
+}
+printf("\nNumber of student in java elective : %d",count_java);
+for (int i=0;i<count_java;i++){
+	printf("\n %s",s[java[i]].name);
+}
+printf("\nNumber of student in ds elective : %d",count_ds);
+for (int i=0;i<count_ds;i++){
+	printf("\n %s",s[ds[i]].name);
+}
+ return 0;
+}
+    
